@@ -1,0 +1,23 @@
+# created by virtualenv automatically
+*
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore sensitive data
+.env
+config.json
+
+# Allow QR_Code_Generator folder
+!QR_Code_Generator/
