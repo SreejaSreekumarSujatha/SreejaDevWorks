@@ -16,6 +16,48 @@ from PIL import Image, ImageTk
 import pyttsx3
 
 
+def get_5_day_forecast(city):
+    # city = entry.get()
+    print("c" + city)
+    api_key = "48eac6fb99760519cf27b14ee972ac29"
+    url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric"
+    response = requests.get(url)
+    if response.status_code != 200:
+        return {"error": "City not found or API error."}
+    
+    data = response.json()
+    forecast_list = data['list']
+    daily_forecast = {}
+    
+    for item in forecast_list:
+        dt_txt = item['dt_txt']
+        date = dt_txt.split(" ")[0]
+        if "12:00:00" in dt_txt:
+            weather = item['weather'][0]['description'].capitalize()
+            temp = item['main']['temp']
+            daily_forecast[date] = {
+                'temp': round(temp, 1),
+                'description': weather
+            }
+    
+    return daily_forecast
+
+
+def speak_forecast(city):
+    print(city)
+    # city = entry.get()
+    forecast = get_5_day_forecast(city)
+    
+    if "error" in forecast:
+        engine.say(forecast["error"])
+    else:
+        for date, info in forecast.items():
+            sentence = f"On {date}, the weather will be {info['description']} with a temperature of {info['temp']} degrees Celsius."
+            engine.say(sentence)
+    
+    engine.runAndWait()
+
+
 def create_gradient(canvas, width, height):
     start_color = (230, 240, 255)
     end_color = (70, 130, 180)
@@ -272,6 +314,29 @@ canvas = tk.Canvas(window, width=900, height=700)
 canvas.pack(fill="both", expand=True)
 
 create_gradient(canvas, 900, 700)
+# Text to speech converter
+engine = pyttsx3.init()
+# engine.say("I will speak this text")
+
+# Rate
+
+# Getting details of current speaking rate
+rate = engine.getProperty('rate')
+# Setting up new voice rate
+engine.setProperty('rate', 125)
+
+# Volume
+# Getting to know current volume level (min=0 and max=1)
+
+volume = engine.getProperty('volume')
+# Setting up volume level  between 0 and 1
+engine.setProperty('volume', 1.0)
+
+# Voice
+# Getting details of current voice
+voices = engine.getProperty('voices')
+# Changing index, changes voices. 1 for female
+engine.setProperty('voice', voices[1].id)
 
 # Entry field
 entry = ctk.CTkEntry(
