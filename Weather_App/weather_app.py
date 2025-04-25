@@ -15,6 +15,17 @@ import requests
 from PIL import Image, ImageTk
 import pyttsx3
 
+
+def create_gradient(canvas, width, height):
+    start_color = (230, 240, 255)
+    end_color = (70, 130, 180)
+    for i in range(height):
+        r = int(start_color[0] + (end_color[0] - start_color[0]) * i / height)
+        g = int(start_color[1] + (end_color[1] - start_color[1]) * i / height)
+        b = int(start_color[2] + (end_color[2] - start_color[2]) * i / height)
+        canvas.create_line(0, i, width, i, fill=f"#{r:02x}{g:02x}{b:02x}", width=1)
+
+
 # Initialize the main window
 window = tk.Tk()
 window.title("Weather App")
@@ -24,3 +35,9 @@ window.update()
 title_icon = PhotoImage(file="Images/weather.png")
 window.iconphoto(True, title_icon)
 window.resizable(False, False)
+
+# Create and draw canvas
+canvas = tk.Canvas(window, width=900, height=700)
+canvas.pack(fill="both", expand=True)
+
+create_gradient(canvas, 900, 700)
