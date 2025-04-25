@@ -1,0 +1,26 @@
+# Ignore everything by default
+*
+
+# But not these:
+!.gitignore
+!weather_app.py
+!Images/
+!Images/**
+!README.md
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings (if you're using PyCharm or similar)
+.idea/
+
+# Ignore log files (if any are generated)
+*.log
