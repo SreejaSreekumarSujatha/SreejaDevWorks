@@ -14,3 +14,13 @@ import customtkinter as ctk
 import requests
 from PIL import Image, ImageTk
 import pyttsx3
+
+# Initialize the main window
+window = tk.Tk()
+window.title("Weather App")
+window.geometry("900x700")
+window.update()
+
+title_icon = PhotoImage(file="Images/weather.png")
+window.iconphoto(True, title_icon)
+window.resizable(False, False)
