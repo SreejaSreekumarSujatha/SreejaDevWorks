@@ -41,6 +41,32 @@ def draw_heading(event):
                        tags="heading")
 
 
+def draw_weather_cards(canvas, data):
+    canvas.delete("weather_cards")
+    
+    def create_card(x, y, width, height, title, value, emoji):
+        canvas.create_rectangle(
+            x, y, x + width, y + height, fill="#6c9dc6",
+            outline="#91b6d4", width=2, tags="weather_cards"
+        )
+        canvas.create_text(x + 15, y + 10, text=emoji, font=("Segoe UI Emoji", 20), anchor="nw", tags="weather_cards",
+                           fill="white")
+        canvas.create_text(x + 55, y + 10, text=title, font=("Times New Roman", 15, "bold"), anchor="nw", fill="white",
+                           tags="weather_cards")
+        canvas.create_text(x + 55, y + 35, text=value, font=("Times New Roman", 15), anchor="nw", fill="white",
+                           tags="weather_cards")
+    
+    # x1, x2 = 120, 470
+    # y1, y2 = 420, 520
+    # Position for 3 cards horizontally
+    x1, x2, x3 = 80, 360, 650  # Adjust these to space out the cards nicely
+    y1 = 410  # Same y-coordinate to keep them in the same row
+    
+    create_card(x1, y1, 200, 70, "Humidity", f"{data['humidity']}%", emoji="💧")
+    create_card(x2, y1, 200, 70, "Wind Speed", f"{data['wind_speed']} m/s", emoji="🌬")
+    create_card(x3, y1, 200, 70, "Condition", data['description'].capitalize(), emoji="☀")
+
+
 def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels_like, weather_icon, country_code):
     global weather_img_tk
     
@@ -54,28 +80,28 @@ def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels
             
             elif weather_desp in ['few clouds', 'scattered clouds', 'broken clouds']:
                 img = Image.open("Images/night_clouds.png").resize((90, 90))
-                weather_msg = "Clouds under the moonlight 🌙"
+                weather_msg = "Clouds under the moonlight"
             
             elif weather_desp in ['rain', 'light rain', 'moderate rain', 'heavy intensity rain',
                                   'shower rain', 'light intensity shower rain', 'drizzle',
                                   'light intensity drizzle', 'heavy intensity drizzle']:
                 img = Image.open("Images/night_rain.png").resize((90, 90))
-                weather_msg = "Rainy night☔"
+                weather_msg = "Rainy night"
             
             elif weather_desp in ['overcast clouds']:
                 img = Image.open("Images/overcast_night.png").resize((90, 90))
-                weather_msg = "Overcast night ☁️"
+                weather_msg = "Overcast night "
             
             elif weather_desp in ['snow', 'light snow', 'heavy snow', 'sleet', 'shower snow',
                                   'light rain and snow']:
                 img = Image.open("Images/night_snow.png").resize((90, 90))
-                weather_msg = "Snowy night ❄️ Stay warm!"
+                weather_msg = "Snowy night, Stay warm!"
             
             elif weather_desp in ['thunderstorm', 'storm',
                                   'thunderstorm with light rain', 'thunderstorm with heavy rain',
                                   'thunderstorm with drizzle', 'heavy thunderstorm']:
                 img = Image.open("Images/night_thunder1.png").resize((90, 90))
-                weather_msg = "Stormy night ⚡ Stay safe!"
+                weather_msg = "Stormy night Stay safe!"
             
             elif weather_desp in ['mist', 'fog', 'haze', 'smoke', 'sand', 'dust', 'volcanic ash']:
                 img = Image.open("Images/night_fog.png").resize((90, 90))
@@ -83,7 +109,7 @@ def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels
             
             elif weather_desp in ['tornado', 'squall', 'hurricane', 'cold', 'hot', 'windy']:
                 img = Image.open("Images/typhoon.png").resize((90, 90))
-                weather_msg = "Extreme night weather ⚠️ Stay alert!"
+                weather_msg = "Extreme night weather, Stay alert!"
             
             else:
                 img = Image.open("Images/unknown_1.png").resize((90, 90))
@@ -102,7 +128,7 @@ def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels
                                   'shower rain', 'light intensity shower rain', 'drizzle',
                                   'light intensity drizzle', 'heavy intensity drizzle']:
                 img = Image.open("Images/kid.png").resize((90, 90))
-                weather_msg = "Grab your umbrella ☔"
+                weather_msg = "Grab your umbrella"
             
             elif weather_desp in ['clouds', 'overcast clouds']:
                 img = Image.open("Images/cloudy.png").resize((90, 90))
@@ -111,25 +137,25 @@ def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels
             elif weather_desp in ['snow', 'light snow', 'heavy snow', 'sleet', 'shower sleet',
                                   'light shower sleet', 'rain and snow', 'light rain and snow', 'shower snow']:
                 img = Image.open("Images/snow.png").resize((90, 90))
-                weather_msg = "Snow Day! ❄️"
+                weather_msg = "Snow Day!"
             
             elif weather_desp in ['thunderstorm', 'storm',
                                   'thunderstorm with light rain', 'thunderstorm with heavy rain',
                                   'thunderstorm with drizzle', 'heavy thunderstorm']:
                 img = Image.open("Images/thunderstorm.png").resize((90, 90))
-                weather_msg = "Thunderstorm time! Stay indoors ⚡"
+                weather_msg = "Thunderstorm time! Stay indoors"
             
             elif weather_desp in ['mist', 'fog', 'haze', 'smoke', 'sand', 'dust', 'volcanic ash']:
                 img = Image.open("Images/foggy-day.png").resize((90, 90))
-                weather_msg = "Foggy feels. Drive safe! 🌫️"
+                weather_msg = "Foggy feels. Drive safe!"
             
             elif weather_desp in ['tornado', 'squall', 'hurricane', 'cold', 'hot', 'windy']:
                 img = Image.open("Images/typhoon.png").resize((90, 90))
-                weather_msg = "Twister alert! Find shelter now! 🌪️"
+                weather_msg = "Twister alert! Find shelter now! ️"
             
             else:
                 img = Image.open("Images/unknown_1.png").resize((90, 90))
-                weather_msg = "Hmm... can't read the sky right now! 🤷"
+                weather_msg = "Hmm... can't read the sky right now!"
         
         weather_img_tk = ImageTk.PhotoImage(img)
         canvas.delete("weather_display")
@@ -165,7 +191,7 @@ def disply_weather_img(weather_desp, city_name, rounded_temperature, round_feels
         weather_img_id = canvas.create_image((canvas.winfo_width() // 2) + 300, 220, image=weather_img_tk, anchor="nw",
                                              tags="weather_display")
         
-        canvas.create_text((canvas.winfo_width() // 2) + 300, 340, text=weather_msg, fill="white",
+        canvas.create_text((canvas.winfo_width() // 2) + 310, 340, text=weather_msg, fill="white",
                            font=("Bradley Hand ITC", 15, "bold"), anchor="center", tags="temp_display")
         
         canvas.create_image((canvas.winfo_width() // 2) - 420, 530, image=new_spkg_img, anchor="nw",
