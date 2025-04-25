@@ -22,3 +22,4 @@ config.json
 # Allow QR_Code_Generator folder
 !Qr_Code_Generator/
 !Qr_Code_Generator/**
+!Qr_Code_Generator/README.md
