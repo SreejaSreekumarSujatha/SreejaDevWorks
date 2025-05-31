@@ -4,7 +4,7 @@ A modern .NET microservices application for user management with clean architect
 
 ## 📸 API Documentation
 
-![User Management API](swagger-ui.png)
+![User Management API](./swagger-ui.png)
 *Interactive Swagger UI showing all user management endpoints*
 
 ## 🔧 Tech Stack
