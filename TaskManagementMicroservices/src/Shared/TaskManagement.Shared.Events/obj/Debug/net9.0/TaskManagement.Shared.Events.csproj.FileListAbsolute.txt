@@ -1,0 +1,11 @@
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\bin\Debug\net9.0\TaskManagement.Shared.Events.deps.json
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\bin\Debug\net9.0\TaskManagement.Shared.Events.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\bin\Debug\net9.0\TaskManagement.Shared.Events.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.AssemblyInfoInputs.cache
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.AssemblyInfo.cs
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.csproj.CoreCompileInputs.cache
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\refint\TaskManagement.Shared.Events.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\TaskManagement.Shared.Events.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Shared\TaskManagement.Shared.Events\obj\Debug\net9.0\ref\TaskManagement.Shared.Events.dll

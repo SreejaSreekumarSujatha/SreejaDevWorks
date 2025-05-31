@@ -1,0 +1,17 @@
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.User.Application.deps.json
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.User.Application.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.User.Application.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.Shared.Domain.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.User.Domain.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.User.Domain.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\bin\Debug\net9.0\TaskManagement.Shared.Domain.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.csproj.AssemblyReference.cache
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.AssemblyInfoInputs.cache
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.AssemblyInfo.cs
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.csproj.CoreCompileInputs.cache
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskMana.7E08B041.Up2Date
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\refint\TaskManagement.User.Application.dll
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\TaskManagement.User.Application.pdb
+C:\Users\sreej\source\repos\TaskManagementMicroservices\src\Services\User\TaskManagement.User.Application\obj\Debug\net9.0\ref\TaskManagement.User.Application.dll
